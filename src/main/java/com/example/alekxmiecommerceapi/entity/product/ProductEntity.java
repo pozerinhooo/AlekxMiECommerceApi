@@ -1,5 +1,6 @@
 package com.example.alekxmiecommerceapi.entity.product;
 
+import com.example.alekxmiecommerceapi.entity.abstraction.BaseEntityWithId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductEntity {
+public class ProductEntity extends BaseEntityWithId {
 
     @Id
     @Column(name = "id")
@@ -40,9 +41,6 @@ public class ProductEntity {
     @UpdateTimestamp
     private LocalDateTime lastUpdated;
 
-    @ManyToOne(cascade = {
-            CascadeType.DETACH, CascadeType.MERGE
-    })
-    @JoinColumn(name = "product_category_id", referencedColumnName = "id")
-    private ProductCategoryEntity productCategory;
+    @Column(name = "product_category_id")
+    private Long productCategoryId;
 }

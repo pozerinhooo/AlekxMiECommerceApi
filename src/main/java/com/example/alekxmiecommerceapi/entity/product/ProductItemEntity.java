@@ -1,5 +1,6 @@
 package com.example.alekxmiecommerceapi.entity.product;
 
+import com.example.alekxmiecommerceapi.entity.abstraction.BaseEntityWithId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductItemEntity {
+public class ProductItemEntity extends BaseEntityWithId {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
