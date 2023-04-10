@@ -14,5 +14,11 @@
     <include file="db/04-create-role-authority-table.xml" relativeToChangelogFile="false"/>
     <include file="db/05-create-user-account-table.xml" relativeToChangelogFile="false"/>
     <include file="db/06-create-user-role-table.xml" relativeToChangelogFile="false"/>
-
+    <include file="db/07-create-product-category-table.xml" relativeToChangelogFile="false"/>
+    <include file="db/08-create-product-table.xml" relativeToChangelogFile="false"/>
+    <include file="db/09-create-product-item-table.xml" relativeToChangelogFile="false"/>
+    <include file="db/10-create-product-image-table.xml" relativeToChangelogFile="false"/>
+    <include file="db/11-create-product-variation-table.xml" relativeToChangelogFile="false"/>
+    <include file="db/12-create-product-variation-option-table.xml" relativeToChangelogFile="false"/>
+    <include file="db/13-create-product-configuration-table.xml" relativeToChangelogFile="false"/>
 </databaseChangeLog>

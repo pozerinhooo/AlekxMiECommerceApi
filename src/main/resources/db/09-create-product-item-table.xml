@@ -8,14 +8,22 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
-    <changeSet id="07-create-product-category-table" author="matrasj">
-        <createTable tableName="product_category">
+    <changeSet id="09-create-product-item-table" author="matrasj">
+        <createTable tableName="product_item">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
 
-            <column name="name" type="varchar">
+            <column name="sku_code" type="varchar">
                 <constraints nullable="false"/>
+            </column>
+
+            <column name="quantity_in_stock" type="bigint">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="price" type="numeric(8,2)" >
+                <constraints nullable="true"/>
             </column>
 
             <column name="removed" type="boolean" defaultValueBoolean="false">
@@ -30,9 +38,9 @@
                 <constraints nullable="true"/>
             </column>
 
-            <column name="parent_category_id" type="bigint">
-                <constraints referencedColumnNames="id" referencedTableName="product_category"
-                foreignKeyName="product_category_parent_product_category_fk"/>
+            <column name="product_id" type="bigint">
+                <constraints referencedColumnNames="id" referencedTableName="product"
+                foreignKeyName="product_item_product_fk"/>
             </column>
         </createTable>
     </changeSet>
