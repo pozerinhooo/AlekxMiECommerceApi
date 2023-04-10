@@ -1,5 +1,6 @@
 package com.example.alekxmiecommerceapi.entity.product;
 
+import com.example.alekxmiecommerceapi.entity.abstraction.BaseEntityWithId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +14,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductVariationOptionEntity {
+public class ProductVariationOptionEntity extends BaseEntityWithId {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

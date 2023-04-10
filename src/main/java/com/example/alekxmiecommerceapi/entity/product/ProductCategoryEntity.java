@@ -1,5 +1,6 @@
 package com.example.alekxmiecommerceapi.entity.product;
 
+import com.example.alekxmiecommerceapi.entity.abstraction.BaseEntityWithId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductCategoryEntity {
+public class ProductCategoryEntity extends BaseEntityWithId {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,11 +26,8 @@ public class ProductCategoryEntity {
     @Column(name = "name")
     private String name;
 
-    @JoinColumn(name = "parent_category_id", referencedColumnName = "id")
-    @ManyToOne(cascade = {
-            CascadeType.DETACH, CascadeType.MERGE
-    })
-    private ProductCategoryEntity parentCategory;
+    @Column(name = "parent_category_id")
+    private Long parentCategoryId;
 
     @Column(name = "removed")
     private boolean removed;

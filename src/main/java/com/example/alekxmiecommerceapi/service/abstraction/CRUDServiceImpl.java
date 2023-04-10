@@ -10,7 +10,7 @@ import java.util.List;
 
 public abstract class CRUDServiceImpl<TEntity extends BaseEntityWithId> implements CRUDService<TEntity> {
     @Autowired
-    private JpaRepository<TEntity, Long> repository;
+    protected JpaRepository<TEntity, Long> repository;
 
     @Override
     public TEntity save(TEntity entity) {
