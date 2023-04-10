@@ -8,8 +8,8 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
-    <changeSet id="07-create-product-category-table" author="matrasj">
-        <createTable tableName="product_category">
+    <changeSet id="11-create-product-variation-table" author="matrasj">
+        <createTable tableName="product_variation">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
@@ -18,21 +18,9 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="removed" type="boolean" defaultValueBoolean="false">
-                <constraints nullable="true"/>
-            </column>
-
-            <column name="created_at" type="timestamp without time zone">
-                <constraints nullable="false"/>
-            </column>
-
-            <column name="last_updated" type="timestamp without time zone">
-                <constraints nullable="true"/>
-            </column>
-
-            <column name="parent_category_id" type="bigint">
+            <column name="product_category_id" type="bigint">
                 <constraints referencedColumnNames="id" referencedTableName="product_category"
-                foreignKeyName="product_category_parent_product_category_fk"/>
+                foreignKeyName="product_variation_product_category_fk"/>
             </column>
         </createTable>
     </changeSet>
