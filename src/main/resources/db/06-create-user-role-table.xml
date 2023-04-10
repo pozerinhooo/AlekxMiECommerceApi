@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="06-create-user-role-table" author="matrasj">
+        <createTable tableName="user_account_role">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="user_account_id" type="bigint">
+                <constraints nullable="false" referencedColumnNames="id"
+                referencedTableName="user_account" foreignKeyName="fk_user_account_role_user_account"/>
+            </column>
+
+            <column name="role_id" type="bigint">
+                <constraints nullable="false" referencedColumnNames="id"
+                             referencedTableName="role" foreignKeyName="fk_user_account_role"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

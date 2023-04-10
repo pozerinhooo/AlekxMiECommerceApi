@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="04-create-role-authority-table" author="matrasj">
+        <createTable tableName="role_authority">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="role_id" type="bigint">
+                <constraints nullable="false" referencedColumnNames="id"
+                referencedTableName="role" foreignKeyName="fk_role_authority_role"/>
+            </column>
+
+            <column name="authority_id" type="bigint">
+                <constraints nullable="false" referencedColumnNames="id"
+                             referencedTableName="authority" foreignKeyName="fk_role_authority_authority"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
