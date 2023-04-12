@@ -24,5 +24,45 @@
                              referencedTableName="authority" foreignKeyName="fk_role_authority_authority"/>
             </column>
         </createTable>
+
+        <insert tableName="role_authority">
+            <column name="role_id">1</column>
+            <column name="authority_id">2</column>
+        </insert>
+
+        <insert tableName="role_authority">
+            <column name="role_id">2</column>
+            <column name="authority_id">1</column>
+        </insert>
+
+        <insert tableName="role_authority">
+            <column name="role_id">2</column>
+            <column name="authority_id">2</column>
+        </insert>
+
+        <insert tableName="role_authority">
+            <column name="role_id">2</column>
+            <column name="authority_id">3</column>
+        </insert>
+
+        <insert tableName="role_authority">
+            <column name="role_id">3</column>
+            <column name="authority_id">1</column>
+        </insert>
+
+        <insert tableName="role_authority">
+            <column name="role_id">3</column>
+            <column name="authority_id">2</column>
+        </insert>
+
+        <insert tableName="role_authority">
+            <column name="role_id">3</column>
+            <column name="authority_id">3</column>
+        </insert>
+
+        <insert tableName="role_authority">
+            <column name="role_id">3</column>
+            <column name="authority_id">4</column>
+        </insert>
     </changeSet>
 </databaseChangeLog>

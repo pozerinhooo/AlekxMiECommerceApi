@@ -23,5 +23,15 @@
                 foreignKeyName="product_variation_product_category_fk"/>
             </column>
         </createTable>
+
+        <insert tableName="product_variation">
+            <column name="name">Kolor</column>
+            <column name="product_category_id">1</column>
+        </insert>
+
+        <insert tableName="product_variation">
+            <column name="name">Rozmiar</column>
+            <column name="product_category_id">1</column>
+        </insert>
     </changeSet>
 </databaseChangeLog>

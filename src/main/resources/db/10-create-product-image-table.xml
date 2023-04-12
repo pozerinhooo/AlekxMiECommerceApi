@@ -22,8 +22,21 @@
                 <constraints referencedColumnNames="id" referencedTableName="product_item"
                 foreignKeyName="product_image_product_item_fk"/>
             </column>
-
-
         </createTable>
+
+        <insert tableName="product_image">
+            <column name="image_path">assets/images/product_image_1_1.png</column>
+            <column name="product_item_id">1</column>
+        </insert>
+
+        <insert tableName="product_image">
+            <column name="image_path">assets/images/product_image_1_2.png</column>
+            <column name="product_item_id">1</column>
+        </insert>
+
+        <insert tableName="product_image">
+            <column name="image_path">assets/images/product_image_1_3.png</column>
+            <column name="product_item_id">1</column>
+        </insert>
     </changeSet>
 </databaseChangeLog>

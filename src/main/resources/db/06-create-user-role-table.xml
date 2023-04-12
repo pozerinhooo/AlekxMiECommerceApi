@@ -24,5 +24,10 @@
                              referencedTableName="role" foreignKeyName="fk_user_account_role"/>
             </column>
         </createTable>
+
+        <insert tableName="user_account_role">
+            <column name="user_account_id">1</column>
+            <column name="role_id">3</column>
+        </insert>
     </changeSet>
 </databaseChangeLog>

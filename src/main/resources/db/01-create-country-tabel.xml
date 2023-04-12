@@ -25,5 +25,35 @@
                 <constraints nullable="true"/>
             </column>
         </createTable>
+
+        <insert tableName="country">
+            <column name="name">Polska</column>
+            <column name="code">POL</column>
+        </insert>
+
+        <insert tableName="country">
+            <column name="name">Niemcy</column>
+            <column name="code">DEU</column>
+        </insert>
+
+        <insert tableName="country">
+            <column name="name">Francja</column>
+            <column name="code">FRA</column>
+        </insert>
+
+        <insert tableName="country">
+            <column name="name">Hiszpania</column>
+            <column name="code">ESP</column>
+        </insert>
+
+        <insert tableName="country">
+            <column name="name">Portugalia</column>
+            <column name="code">PRT</column>
+        </insert>
+
+        <insert tableName="country">
+            <column name="name">Wielka Brytania</column>
+            <column name="code">GBR</column>
+        </insert>
     </changeSet>
 </databaseChangeLog>

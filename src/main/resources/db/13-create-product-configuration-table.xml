@@ -24,5 +24,40 @@
                              foreignKeyName="product_configuration_product_variation_option_fk"/>
             </column>
         </createTable>
+
+        <insert tableName="product_configuration">
+            <column name="product_item_id">1</column>
+            <column name="product_variation_option_id">1</column>
+        </insert>
+
+        <insert tableName="product_configuration">
+            <column name="product_item_id">1</column>
+            <column name="product_variation_option_id">2</column>
+        </insert>
+
+        <insert tableName="product_configuration">
+            <column name="product_item_id">1</column>
+            <column name="product_variation_option_id">3</column>
+        </insert>
+
+        <insert tableName="product_configuration">
+            <column name="product_item_id">1</column>
+            <column name="product_variation_option_id">4</column>
+        </insert>
+
+        <insert tableName="product_configuration">
+            <column name="product_item_id">1</column>
+            <column name="product_variation_option_id">5</column>
+        </insert>
+
+        <insert tableName="product_configuration">
+            <column name="product_item_id">1</column>
+            <column name="product_variation_option_id">6</column>
+        </insert>
+
+        <insert tableName="product_configuration">
+            <column name="product_item_id">1</column>
+            <column name="product_variation_option_id">7</column>
+        </insert>
     </changeSet>
 </databaseChangeLog>
