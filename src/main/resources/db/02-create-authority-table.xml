@@ -21,5 +21,22 @@
                 <constraints nullable="true"/>
             </column>
         </createTable>
+
+        <insert tableName="authority">
+            <column name="permission">CREATE</column>
+        </insert>
+
+        <insert tableName="authority">
+            <column name="permission">READ</column>
+        </insert>
+
+        <insert tableName="authority">
+            <column name="permission">UPDATE</column>
+        </insert>
+
+        <insert tableName="authority">
+            <column name="permission">DELETE</column>
+        </insert>
+
     </changeSet>
 </databaseChangeLog>

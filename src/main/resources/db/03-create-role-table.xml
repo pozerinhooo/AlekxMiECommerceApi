@@ -21,5 +21,21 @@
                 <constraints nullable="true"/>
             </column>
         </createTable>
+
+        <insert tableName="role">
+            <column name="name">USER</column>
+        </insert>
+
+        <insert tableName="role">
+            <column name="name">MODERATOR</column>
+        </insert>
+
+        <insert tableName="role">
+            <column name="name">ADMIN</column>
+        </insert>
+
+        <insert tableName="role">
+            <column name="name">CONSERVATOR</column>
+        </insert>
     </changeSet>
 </databaseChangeLog>

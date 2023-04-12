@@ -35,5 +35,10 @@
                 foreignKeyName="product_category_parent_product_category_fk"/>
             </column>
         </createTable>
+
+        <insert tableName="product_category">
+            <column name="name">T-shirt</column>
+            <column name="created_at">2023-04-12 17:32:41.728254 +00:00</column>
+        </insert>
     </changeSet>
 </databaseChangeLog>
